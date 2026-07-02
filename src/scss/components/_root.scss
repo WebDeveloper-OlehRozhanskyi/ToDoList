@@ -1,0 +1,28 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+:root {
+ --font-family: 'Arial', sans-serif;
+ --second-family: '', sans-serif;
+ --third-family: '', sans-serif;
+ --background: #fbead6;
+ --background-second: #7aa4ad;
+ --main-color: #2c2c2c;
+ --title-color: #717171;
+ --brand-color: #ffd11a;
+ --white: #fff;
+ --black: #000;
+ --padding-inline: #{rem(40)};
+ --gap-50: #{rem(50)};
+ --gap-content: #{rem(40)};
+ --gap-basic: #{rem(16)};
+ --transition-long: 0.5s;
+
+ @media (width <= rem($l)) {
+  // --padding-inline: var(--gap-content);
+ }
+
+ @media (width <= rem($bm)) {
+  // --padding-inline: var(--gap-basic);
+ }
+}
