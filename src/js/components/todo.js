@@ -14,7 +14,6 @@ export function initTodo() {
  function renderToDoList(items) {
   toDoList.innerHTML = ''
   const listItems = items.map(item => createListItem(item))
-  console.log(listItems)
   toDoList.append(...listItems)
  }
 
