@@ -1,3 +1,3 @@
-import { toDoList } from './components/todo.js'
+import { initTodo } from './components/todo.js'
 
-toDoList()
+initTodo()
