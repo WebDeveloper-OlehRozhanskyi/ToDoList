@@ -58,6 +58,10 @@ async function makeWebpAvif(srcNoExt) {
 }
 
 ;(async () => {
+ if (!(await exists(ROOT))) {
+  console.log('skip: no', path.relative('src', ROOT))
+  return
+ }
  for await (const file of walk(ROOT)) {
   const ext = path.extname(file).toLowerCase()
   if (!exts.has(ext)) continue
