@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
  <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +22,27 @@
   <main class="main">
    <section class="main__todo-task todo-task">
     <h1 class="todo-task__title">Мої завдання</h1>
+    <form class="todo-task__form">
+     <input class="todo-task__input" type="text" placeholder="Нове завдання" />
+     <div class="todo-task__check-wrap">
+      <input
+       class="todo-task__radio"
+       type="radio"
+       id="low"
+       name="priority"
+       value="low" />
+      <label class="todo-task__label" for="low">Низький</label>
+      <input
+       class="todo-task__radio"
+       type="radio"
+       id="high"
+       name="priority"
+       value="high"
+       checked />
+      <label class="todo-task__label" for="high">Високий</label>
+     </div>
+     <button class="todo-task__add" type="submit">Додати</button>
+    </form>
     <ul class="todo-task__list"></ul>
    </section>
   </main>

@@ -1,5 +1,80 @@
 @use 'foundation' as *;
 
 .main {
- margin: rem(30);
+ margin: var(--gap-content);
+
+ // .main__todo-task
+ &__todo-task {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-content);
+ }
+}
+
+.todo-task {
+ // .todo-task__title
+ &__title {
+  @include margin-block;
+ }
+
+ // .todo-task__form
+ &__form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: var(--gap-basic);
+ }
+
+ // .todo-task__input
+ &__input {
+  font-family: inherit;
+  font-size: inherit;
+ }
+
+ // .todo-task__check-wrap
+ //  &__check-wrap {}
+
+ // .todo-task__radio
+ //  &__radio {}
+
+ // .todo-task__label
+ //  &__label {}
+
+ // .todo-task__add
+ //  &__add {}
+
+ // .todo-task__list
+ &__list {
+  @include list;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-basic);
+  max-width: max-content;
+ }
+
+ // .todo-task__item
+ &__item {
+  position: relative;
+  padding-left: var(--gap-basic);
+
+  &::before {
+   position: absolute;
+   top: 50%;
+   left: rem(3);
+   width: rem(10);
+   height: rem(10);
+   border-radius: 50%;
+   transform: translateY(-50%);
+   content: '';
+  }
+
+  &--high::before {
+   background-color: red;
+  }
+
+  &--low::before {
+   background-color: green;
+  }
+ }
 }

@@ -1,36 +1,36 @@
 export const tasks = [
  {
-  name: 'clean the aquarium',
+  name: 'Підмінити воду в акваріумі',
   done: false,
   priority: 'low',
  },
  {
-  name: 'clean the coffee machine',
+  name: 'Почистити кавомашину',
   done: false,
   priority: 'low',
  },
  {
-  name: 'training',
+  name: 'Тренування',
   done: true,
   priority: 'high',
  },
  {
-  name: 'cleaning in the apartment',
+  name: 'Поприбирати в квартирі',
   done: false,
   priority: 'low',
  },
  {
-  name: 'send parcels',
+  name: 'Відправити посилки',
   done: true,
   priority: 'high',
  },
  {
-  name: 'js lesson',
+  name: 'Урок JS',
   done: true,
   priority: 'high',
  },
  {
-  name: 'Czech lesson',
+  name: 'Послухати подкаст чешською',
   done: false,
   priority: 'high',
  },
