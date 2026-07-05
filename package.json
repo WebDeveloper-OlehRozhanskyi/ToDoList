@@ -35,8 +35,5 @@
   "vite": "7.1.9",
   "vite-plugin-image-optimizer": "2.0.3",
   "vite-plugin-svg-icons": "2.0.1"
- },
- "dependencies": {
-  "swiper": "12.1.3"
  }
 }

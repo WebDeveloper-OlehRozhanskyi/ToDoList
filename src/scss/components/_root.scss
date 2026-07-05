@@ -2,24 +2,19 @@
 @use 'variables' as *;
 
 :root {
- // Нейтральна шкала (текст, фони, бордери) — сіра
- --color-900: #1a1a2e; // майже чорний — основний текст
- --color-600: #6b7280; // сірий — другорядний текст
- --color-300: #d1d5db; // світло-сірий — бордери
- --color-100: #f3f4f6; // майже білий — фон блоків
+ --color-900: #1a1a2e; 
+ --color-600: #6b7280; 
+ --color-300: #d1d5db; 
+ --color-100: #f3f4f6; 
  --color-white: #fff;
-
- // ОДИН акцент — обери свій. Наприклад синій:
- --color-accent: #3b82f6; // кнопки, активні стани
- --color-accent-dark: #2563eb; // ховер акценту
-
- // Семантичні (статуси)
- --color-danger: #ef4444; // видалення, високий пріоритет
- --color-success: #22c55e; // виконано, низький пріоритет
+ --color-accent: #3b82f6; 
+ --color-accent-dark: #2563eb; 
+ --color-danger: #ef4444; 
+ --color-success: #22c55e; 
  --font-family: 'Arial', sans-serif;
- --text-lg: #{rem(24)}; // заголовок h1
+ --text-lg: #{rem(24)};
  --text-base: #{rem(16)}; // весь основний текст
- --text-sm: #{rem(14)}; // другорядне (лічильник, підписи)
+ --text-sm: #{rem(14)}; 
  --padding-inline: #{rem(32)};
  --gap-xs: #{rem(4)};
  --gap-sm: #{rem(8)};
@@ -32,9 +27,5 @@
 
  @media (width <= rem($xsm)) {
   --padding-inline: var(--gap-md);
- }
-
- @media (width <= rem($bm)) {
-  // --padding-inline: var(--gap-basic);
  }
 }

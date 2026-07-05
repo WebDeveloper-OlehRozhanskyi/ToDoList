@@ -67,10 +67,10 @@ export function initTodo() {
 
   if (!inputValue) return
 
-  const valueFormatt = inputValue[0].toUpperCase() + inputValue.slice(1)
+  const formattedValue = inputValue[0].toUpperCase() + inputValue.slice(1)
 
   tasks.push({
-   name: valueFormatt,
+   name: formattedValue,
    done: false,
    priority: inputRadio.value,
   })
