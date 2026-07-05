@@ -96,6 +96,14 @@
 }
 
 @mixin hover {
+ @media (hover: hover) and (pointer: fine) {
+  &:hover {
+   @content;
+  }
+ }
+}
+
+@mixin hover-line {
  &::before {
   position: absolute;
   bottom: 0;
@@ -108,11 +116,17 @@
   content: '';
  }
 
- &:hover::before {
-  @media (any-hover: hover) {
+ @include hover {
+  &::before {
    transform: translateX(-50%) scale(1);
   }
  }
+
+ /*  &:hover::before {
+  @media (any-hover: hover) {
+   transform: translateX(-50%) scale(1);
+  }
+ } */
 }
 
 @mixin fluid-text(
