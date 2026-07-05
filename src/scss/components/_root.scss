@@ -2,24 +2,36 @@
 @use 'variables' as *;
 
 :root {
- --font-family: 'Roboto', sans-serif;
- --second-family: '', sans-serif;
- --third-family: '', sans-serif;
- --background: #fbead6;
- --background-second: #7aa4ad;
- --main-color: #2c2c2c;
- --title-color: #717171;
- --brand-color: #ffd11a;
- --white: #fff;
- --black: #000;
- --padding-inline: #{rem(40)};
- --gap-50: #{rem(50)};
- --gap-content: #{rem(32)};
- --gap-basic: #{rem(16)};
- --transition-long: 0.5s;
+ // Нейтральна шкала (текст, фони, бордери) — сіра
+ --color-900: #1a1a2e; // майже чорний — основний текст
+ --color-600: #6b7280; // сірий — другорядний текст
+ --color-300: #d1d5db; // світло-сірий — бордери
+ --color-100: #f3f4f6; // майже білий — фон блоків
+ --color-white: #fff;
 
- @media (width <= rem($l)) {
-  // --padding-inline: var(--gap-content);
+ // ОДИН акцент — обери свій. Наприклад синій:
+ --color-accent: #3b82f6; // кнопки, активні стани
+ --color-accent-dark: #2563eb; // ховер акценту
+
+ // Семантичні (статуси)
+ --color-danger: #ef4444; // видалення, високий пріоритет
+ --color-success: #22c55e; // виконано, низький пріоритет
+ --font-family: 'Arial', sans-serif;
+ --text-lg: #{rem(24)}; // заголовок h1
+ --text-base: #{rem(16)}; // весь основний текст
+ --text-sm: #{rem(14)}; // другорядне (лічильник, підписи)
+ --padding-inline: #{rem(32)};
+ --gap-xs: #{rem(4)};
+ --gap-sm: #{rem(8)};
+ --gap-md: #{rem(16)};
+ --gap-lg: #{rem(24)};
+ --gap-xl: #{rem(32)};
+ --radius: #{rem(8)};
+ --shadow: 0 1px 3px rgb(0 0 0 / 10%);
+ --transition: 0.3s;
+
+ @media (width <= rem($xsm)) {
+  --padding-inline: var(--gap-md);
  }
 
  @media (width <= rem($bm)) {

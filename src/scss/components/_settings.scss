@@ -13,14 +13,14 @@ body {
  margin: 0;
  padding: 0;
  font-family: var(--font-family);
- font-size: fluid(18, 20, $small-mobile, $mobile);
+ font-size: var(--text-base);
  font-weight: 400;
  line-height: 1.5;
  color: var(--main-color);
- background-color: var(--background);
+ background-color: var(--color-100);
  border: 0;
 
- /*  &.menu-active {
+ /*  &.menu-active {  
   overflow-y: hidden;
   padding-right: rem(7);
 
@@ -30,23 +30,20 @@ body {
  } */
 }
 
-.wrapper {
- position: relative;
-}
-
 :focus-visible {
- outline: rem(2) solid var(--main-color);
- outline-offset: rem(3);
- transition-duration: 0s !important;
+ outline: 2px solid var(--color-accent);
+ outline-offset: 2px;
+
+ //  transition-duration: 0s !important;
 }
 
 .visually-hidden {
  position: absolute !important;
  overflow: hidden !important;
  clip-path: inset(50%) !important;
- width: rem(1) !important;
- height: rem(1) !important;
- margin: rem(-1) !important;
+ width: 1px !important;
+ height: 1px !important;
+ margin: 1px !important;
  padding: 0 !important;
  white-space: nowrap !important;
  border: 0 !important;

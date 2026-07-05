@@ -1,47 +1,151 @@
 @use 'foundation' as *;
 
 .main {
- margin: var(--gap-content);
-
- // .main__todo-task
- &__todo-task {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--gap-content);
- }
+ padding-block: var(--gap-xl);
 }
 
 .todo-task {
+ &__container {
+  @include container;
+
+  padding-block: var(--gap-lg);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-md);
+ }
+
  // .todo-task__title
  &__title {
   @include margin-block;
+
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1;
  }
 
  // .todo-task__form
  &__form {
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  row-gap: var(--gap-basic);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--gap-sm);
  }
 
  // .todo-task__input
  &__input {
+  flex: 1 0 100%;
+  min-height: rem(40);
+  padding: var(--gap-sm) var(--gap-sm);
   font-family: inherit;
   font-size: inherit;
+  border: 1px solid var(--color-300);
+  border-radius: var(--radius);
  }
 
  // .todo-task__check-wrap
- //  &__check-wrap {}
+ &__check-wrap {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap-sm);
+  margin: 0;
+  padding: var(--gap-sm);
+  border: 1px solid var(--color-300);
+  border-radius: var(--radius);
+
+  // margin-right: var(--gap-md);
+ }
+
+ // .todo-task__title-form
+ &__title-form {
+  @include margin-block;
+
+  font-size: var(--text-base);
+ }
 
  // .todo-task__radio
- //  &__radio {}
+ &__radio {
+  display: grid;
+  place-content: center;
+  width: rem(18);
+  height: rem(18);
+  margin: 0;
+  border: rem(2) solid var(--color-300);
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+  appearance: none;
+  flex-shrink: 0;
+
+  &::before {
+   width: rem(8);
+   height: rem(8);
+   background-color: var(--color-accent);
+   border-radius: 50%;
+   transform: scale(0);
+   transition: var(--transition);
+   content: '';
+  }
+
+  &:checked {
+   border-color: var(--color-accent);
+
+   &::before {
+    transform: scale(1);
+   }
+  }
+
+  &:hover {
+   border-color: var(--color-accent);
+  }
+
+  &[value='low']:checked {
+   border-color: var(--color-success);
+
+   &::before {
+    background-color: var(--color-success);
+   }
+  }
+
+  &[value='high']:checked {
+   border-color: var(--color-danger);
+
+   &::before {
+    background-color: var(--color-danger);
+   }
+  }
+ }
 
  // .todo-task__label
- //  &__label {}
+ &__label {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  cursor: pointer;
+ }
 
  // .todo-task__add
- //  &__add {}
+ &__add {
+  @include button;
+
+  padding: var(--gap-sm) var(--gap-md);
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius);
+  transition: var(--transition);
+
+  &:hover {
+   background-color: var(--color-accent-dark);
+  }
+ }
+
+ // .todo-task__counter
+ &__counter {
+  @include margin-block;
+
+  font-size: var(--text-sm);
+  color: var(--color-600);
+ }
 
  // .todo-task__list
  &__list {
@@ -49,32 +153,78 @@
 
   display: flex;
   flex-direction: column;
-  row-gap: var(--gap-basic);
-  max-width: max-content;
+  row-gap: var(--gap-md);
+  padding: var(--gap-lg);
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  @media (width <= rem($xsm)) {
+   padding: var(--gap-md);
+  }
  }
 
  // .todo-task__item
  &__item {
-  position: relative;
-  padding-left: var(--gap-basic);
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap-md);
+  padding: var(--gap-sm);
+  border: 1px solid var(--color-300);
+  border-radius: var(--radius);
+  transition: var(--transition);
+  cursor: pointer;
+
+  &:hover {
+   background-color: var(--color-100);
+  }
 
   &::before {
-   position: absolute;
-   top: 50%;
-   left: rem(3);
    width: rem(10);
    height: rem(10);
    border-radius: 50%;
-   transform: translateY(-50%);
+   flex-shrink: 0;
    content: '';
   }
 
   &--high::before {
-   background-color: red;
+   background-color: var(--color-danger);
   }
 
   &--low::before {
-   background-color: green;
+   background-color: var(--color-success);
+  }
+ }
+
+ // .todo-task__text
+ &__text {
+  transition: var(--transition);
+  flex-grow: 1;
+
+  &--done {
+   text-decoration: line-through;
+   color: var(--color-600);
+  }
+ }
+
+ // .todo-task__delete
+ &__delete {
+  @include button;
+
+  padding: var(--gap-sm);
+  line-height: 0;
+  color: var(--color-600);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+   transition: var(--transition);
+   content: '\00D7';
+  }
+
+  &:hover::before {
+   color: var(--color-danger);
   }
  }
 }

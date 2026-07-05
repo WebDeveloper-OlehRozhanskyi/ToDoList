@@ -21,29 +21,35 @@
   <header class="header"></header>
   <main class="main">
    <section class="main__todo-task todo-task">
-    <h1 class="todo-task__title">Мої завдання</h1>
-    <form class="todo-task__form">
-     <input class="todo-task__input" type="text" placeholder="Нове завдання" />
-     <div class="todo-task__check-wrap">
-      <input
-       class="todo-task__radio"
-       type="radio"
-       id="low"
-       name="priority"
-       value="low" />
-      <label class="todo-task__label" for="low">Низький</label>
-      <input
-       class="todo-task__radio"
-       type="radio"
-       id="high"
-       name="priority"
-       value="high"
-       checked />
-      <label class="todo-task__label" for="high">Високий</label>
-     </div>
-     <button class="todo-task__add" type="submit">Додати</button>
-    </form>
-    <ul class="todo-task__list"></ul>
+    <div class="todo-task__container">
+     <h1 class="todo-task__title">Мої завдання</h1>
+     <form class="todo-task__form">
+      <input class="todo-task__input" type="text" placeholder="Нове завдання" />
+      <fieldset class="todo-task__check-wrap">
+       <legend class="todo-task__title-form">Пріоритет</legend>
+       <label class="todo-task__label">
+        <input
+         class="todo-task__radio"
+         type="radio"
+         name="priority"
+         value="low"
+         checked />
+        Низький
+       </label>
+       <label class="todo-task__label">
+        <input
+         class="todo-task__radio"
+         type="radio"
+         name="priority"
+         value="high" />
+        Високий
+       </label>
+      </fieldset>
+      <button class="todo-task__add" type="submit">Додати</button>
+     </form>
+     <p class="todo-task__counter"></p>
+     <ul class="todo-task__list"></ul>
+    </div>
    </section>
   </main>
   <footer class="footer"></footer>
