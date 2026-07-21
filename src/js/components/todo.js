@@ -1,6 +1,11 @@
-import { tasks } from '../data/array-of-tasks'
-
 export function initTodo() {
+ let saved
+ try {
+  saved = JSON.parse(localStorage.getItem('tasks'))
+ } catch {
+  saved = null
+ }
+ const tasks = saved || []
  const toDoList = document.querySelector('.todo-task__list')
  const form = document.querySelector('.todo-task__form')
  const counter = document.querySelector('.todo-task__counter')
@@ -56,7 +61,9 @@ export function initTodo() {
   counter.textContent = `Активних: ${taskCount.length}`
  }
 
- renderToDoList(tasks)
+ function saveTasks() {
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+ }
 
  form.addEventListener('submit', event => {
   event.preventDefault()
@@ -75,6 +82,7 @@ export function initTodo() {
    priority: inputRadio.value,
   })
 
+  saveTasks()
   renderToDoList(tasks)
 
   input.value = ''
@@ -91,6 +99,9 @@ export function initTodo() {
    tasks[index].done = !tasks[index].done
   }
 
+  saveTasks()
   renderToDoList(tasks)
  })
+
+ renderToDoList(tasks)
 }

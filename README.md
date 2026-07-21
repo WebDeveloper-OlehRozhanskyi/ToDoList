@@ -12,11 +12,13 @@ A simple task manager built with vanilla JavaScript. My first independent projec
 - Mark tasks as done (click to toggle)
 - Delete tasks
 - Active tasks counter
+- Data persists between sessions via localStorage
 - Empty state message
 
 ## Tech Stack
 
 - Vanilla JavaScript (ES modules)
+- Web Storage API (localStorage)
 - Vite 7
 - SCSS + BEM methodology
 - GitHub Actions (automated deployment to GitHub Pages)
