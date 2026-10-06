@@ -1,11 +1,9 @@
-/** @type {import('stylelint').Config} */
 export default {
  extends: ['stylelint-config-standard-scss'],
  plugins: ['stylelint-scss', 'stylelint-order'],
  rules: {
   'order/properties-order': [
    {
-    // 1. Позиціювання
     properties: [
      'position',
      'inset',
@@ -17,7 +15,6 @@ export default {
     ],
    },
    {
-    // 2. Блочна модель
     properties: [
      'display',
      'flex',
@@ -47,7 +44,6 @@ export default {
     ],
    },
    {
-    // 3. Розміри
     properties: [
      'width',
      'min-width',
@@ -59,7 +55,6 @@ export default {
     ],
    },
    {
-    // 4. Відступи
     properties: [
      'margin',
      'margin-top',
@@ -74,7 +69,6 @@ export default {
     ],
    },
    {
-    // 5. Типографіка
     properties: [
      'font',
      'font-family',
@@ -92,7 +86,6 @@ export default {
     ],
    },
    {
-    // 6. Фон, бордери, фігури
     properties: [
      'background',
      'background-color',
@@ -110,7 +103,6 @@ export default {
     ],
    },
    {
-    // 7. Ефекти
     properties: [
      'opacity',
      'mix-blend-mode',
@@ -124,11 +116,9 @@ export default {
     ],
    },
    {
-    // 8. Інше
     properties: ['content', 'pointer-events', 'user-select'],
    },
   ],
-  // 'scss/dollar-variable-pattern': '^[_]?[a-z][a-zA-Z0-9]*$',
   'selector-class-pattern':
    '^[a-z]+(?:-[a-z0-9]+)*(?:__(?:[a-z0-9]+(?:-[a-z0-9]+)*))?(?:--[a-z0-9-]+)?$',
  },

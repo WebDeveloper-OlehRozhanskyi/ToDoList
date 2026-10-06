@@ -14,7 +14,6 @@
   row-gap: var(--gap-md);
  }
 
- // .todo-task__title
  &__title {
   @include margin-block;
 
@@ -23,7 +22,6 @@
   line-height: 1;
  }
 
- // .todo-task__form
  &__form {
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +29,6 @@
   gap: var(--gap-sm);
  }
 
- // .todo-task__input
  &__input {
   flex: 1 0 100%;
   min-height: rem(40);
@@ -42,7 +39,6 @@
   border-radius: var(--radius);
  }
 
- // .todo-task__check-wrap
  &__check-wrap {
   display: flex;
   align-items: center;
@@ -51,18 +47,14 @@
   padding: var(--gap-sm);
   border: 1px solid var(--color-300);
   border-radius: var(--radius);
-
-  // margin-right: var(--gap-md);
  }
 
- // .todo-task__title-form
  &__title-form {
   @include margin-block;
 
   font-size: var(--text-base);
  }
 
- // .todo-task__radio
  &__radio {
   display: grid;
   place-content: center;
@@ -119,7 +111,6 @@
   }
  }
 
- // .todo-task__label
  &__label {
   display: flex;
   align-items: center;
@@ -127,7 +118,6 @@
   cursor: pointer;
  }
 
- // .todo-task__add
  &__add {
   @include button;
 
@@ -147,7 +137,6 @@
   }
  }
 
- // .todo-task__counter
  &__counter {
   @include margin-block;
 
@@ -155,7 +144,6 @@
   color: var(--color-600);
  }
 
- // .todo-task__list
  &__list {
   @include list;
 
@@ -172,7 +160,6 @@
   }
  }
 
- // .todo-task__item
  &__item {
   display: flex;
   align-items: center;
@@ -208,7 +195,6 @@
   }
  }
 
- // .todo-task__text
  &__text {
   transition: var(--transition);
   flex-grow: 1;
@@ -219,7 +205,6 @@
   }
  }
 
- // .todo-task__delete
  &__delete {
   @include button;
 

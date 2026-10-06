@@ -1,6 +1,6 @@
 {
- "name": "FutureTech",
- "short_name": "FutureTech",
+ "name": "ToDo List",
+ "short_name": "ToDo List",
  "icons": [
   {
    "src": "/web-app-manifest-192x192.png",

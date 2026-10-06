@@ -45,10 +45,10 @@ export function initTodo() {
   if (items.length === 0) {
    const empty = document.createElement('li')
    empty.className = 'todo-task__empty'
-   empty.textContent = 'Немає завдань'
+   empty.textContent = 'No tasks'
    toDoList.append(empty)
 
-   counter.textContent = 'Активних: 0'
+   counter.textContent = 'Active: 0'
    return
   }
 
@@ -58,7 +58,7 @@ export function initTodo() {
 
   const taskCount = items.filter(item => !item.done)
 
-  counter.textContent = `Активних: ${taskCount.length}`
+  counter.textContent = `Active: ${taskCount.length}`
  }
 
  function saveTasks() {

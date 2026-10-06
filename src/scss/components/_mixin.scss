@@ -121,12 +121,6 @@
    transform: translateX(-50%) scale(1);
   }
  }
-
- /*  &:hover::before {
-  @media (any-hover: hover) {
-   transform: translateX(-50%) scale(1);
-  }
- } */
 }
 
 @mixin fluid-text(
@@ -166,12 +160,3 @@
  background-repeat: no-repeat;
  background-size: cover;
 }
-
-/*
-@mixin active {
-	@content;
-	&:active {
-			color: var(--black);
-	}
-}
-*/
