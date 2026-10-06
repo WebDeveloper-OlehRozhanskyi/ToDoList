@@ -50,11 +50,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
- background: var(--background-second);
+ background-color: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
- background-color: var(--main-color);
+ background-color: var(--scrollbar-thumb);
  border: none;
  border-radius: rem(10);
 }
